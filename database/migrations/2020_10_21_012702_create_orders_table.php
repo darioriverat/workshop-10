@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Constants\OrderStatus;
 
 class CreateOrdersTable extends Migration
 {
@@ -15,6 +16,7 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->increments('id');
+            $table->tinyInteger('status')->default(OrderStatus::CREATED);
             $table->double('total_price');
             $table->timestamps();
         });
