@@ -16,6 +16,7 @@ class CreatePaymentsTable extends Migration
     {
         Schema::create('payments', function (Blueprint $table) {
             $table->increments('id');
+            $table->unsignedInteger('order_id');
             $table->string('reference', 32);
             $table->unsignedInteger('request_id')->nullable()->index();
             $table->tinyInteger('status')->default(PaymentStatus::PENDING);
@@ -26,6 +27,8 @@ class CreatePaymentsTable extends Migration
             $table->double('total_paid')->nullable();
             $table->dateTime('paid_at')->nullable();
             $table->timestamps();
+
+            $table->foreign('order_id')->references('id')->on('orders');
         });
     }
 
