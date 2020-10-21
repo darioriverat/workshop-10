@@ -20,4 +20,9 @@ class Payment extends Model
         'total_paid',
         'paid_at',
     ];
+
+    public function order()
+    {
+        return $this->belongsTo(Order::class);
+    }
 }
