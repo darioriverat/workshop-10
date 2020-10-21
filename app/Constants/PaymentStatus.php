@@ -4,15 +4,8 @@ namespace App\Constants;
 
 interface PaymentStatus
 {
-    const FAILED = 0;
-    const APPROVED = 1;
-    const DECLINED = 2;
-    const PENDING = 3;
-
-    public const DESCRIPTION = [
-        self::FAILED => 'FAILED',
-        self::APPROVED => 'APPROVED',
-        self::DECLINED => 'DECLINED',
-        self::PENDING => 'PENDING',
-    ];
+    public const FAILED = 0;
+    public const APPROVED = 1;
+    public const DECLINED = 2;
+    public const PENDING = 3;
 }
