@@ -1,9 +1,9 @@
-window.Vue = require('vue');
-
 import Hello from './components/Hello'
+
+const Vue = require('vue')
 
 Vue.component('hello', Hello)
 
-const app = new Vue({
-    el: '#app'
-});
+new Vue({
+  el: '#app'
+})
