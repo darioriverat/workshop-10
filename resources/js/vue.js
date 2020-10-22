@@ -1,7 +1,4 @@
-require('./bootstrap');
-require('./vue')
-
-window.Vue = require('vue')
+window.Vue = require('vue');
 
 import Hello from './components/Hello'
 
