@@ -10,5 +10,6 @@
         @yield('content')
     </div>
 </section>
+<script src="{{ asset(mix('js/app.js')) }}"></script>
 </body>
 </html>
