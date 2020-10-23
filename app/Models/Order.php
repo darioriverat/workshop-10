@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Constants\OrderStatus;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -17,5 +18,10 @@ class Order extends Model
     public function payments()
     {
         return $this->hasMany(Payment::class);
+    }
+
+    public function status(): string
+    {
+        return OrderStatus::STATUSES[$this->status];
     }
 }
