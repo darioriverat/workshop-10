@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/carrito/{id}', function ($id) {
+    $order = \App\Models\Order::find($id);
+    return view('paymate.create', compact('order'));
+});
+
