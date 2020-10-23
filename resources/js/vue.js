@@ -4,7 +4,7 @@ import PaymentInfo from './components/PaymentInfo'
 
 const Vue = require('vue')
 
-const bus = new Vue({});
+const bus = new Vue({})
 
 Vue.component('hello', Hello)
 Vue.component('payment', Payment)

@@ -6,20 +6,20 @@
 </template>
 
 <script>
-	export default {
-		name: 'Payment',
-		data() {
-			return {
-				order: 3
-			}
-		},
-		methods: {
-			getSession() {
-				axios.post('/api/session', {
-					order: this.order
-				})
-				.then(({data}) => window.location = data.processUrl)
-			}
-		}
-	}
+export default {
+  name: 'Payment',
+  data () {
+    return {
+      order: 3
+    }
+  },
+  methods: {
+    getSession () {
+      axios.post('/api/session', {
+        order: this.order
+      })
+        .then(({ data }) => window.location = data.processUrl)
+    }
+  }
+}
 </script>

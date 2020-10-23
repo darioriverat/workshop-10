@@ -14,15 +14,15 @@ class ApiController
                 'date' => '2020-10-21T23:02:28-05:00'
             ],
             'requestId' => 419245,
-            'processUrl' => 'https://test.placetopay.com/redirection/session/419245/503c2eb98c69c0b58109b687bb2167ac',
-	];
+            'processUrl' => 'https://test.placetopay.com/redirection/session/419763/a5be0a5202b0ddfbbe0e89a06e92a794',
+        ];
 
         return response()->json($session);
     }
 
     public function info()
     {
-      $info = [
+        $info = [
         "requestId" => 419245,
         "status" => [
           "status" => "PENDING",
@@ -58,8 +58,8 @@ class ApiController
           "skipResult" => false,
           "noBuyerFill" => false
         ]
-       ];
+        ];
     
-      return response()->json($info);
+        return response()->json($info);
     }
 }

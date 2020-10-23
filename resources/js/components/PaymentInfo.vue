@@ -46,33 +46,33 @@
 </template>
 
 <script>
-  export default {
-    name: 'PaymentInfo',
-    props: {
-      order: {
-        type: Object,
-        required: true
-      },
-      statuses: {
-        type: Array,
-        required: true
-      }
+export default {
+  name: 'PaymentInfo',
+  props: {
+    order: {
+      type: Object,
+      required: true
     },
-    data() {
-      return {
-        orderStatus: 'pending' 
-      }
-    },
-    methods: {
-      getInformation() {
-        axios.get(`/api/info/${this.order.id}`)
-        .then(({data}) => console.log(data));
-      }
-    },
-    created() {
-      if (this.orderStatus === 'pending') {
-        this.getInformation()
-      }
+    statuses: {
+      type: Array,
+      required: true
+    }
+  },
+  data () {
+    return {
+      orderStatus: 'pending'
+    }
+  },
+  methods: {
+    getInformation () {
+      axios.get(`/api/info/${this.order.id}`)
+        .then(({ data }) => console.log(data))
+    }
+  },
+  created () {
+    if (this.orderStatus === 'pending') {
+      this.getInformation()
     }
   }
+}
 </script>
