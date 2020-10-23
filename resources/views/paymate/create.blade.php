@@ -24,11 +24,7 @@
                             <label class="card-subtitle d-block mb-2 text-black-50">
                                 <span class="font-weight-bold">Total:</span> $190,000
                             </label>
-
-                            <div class="text-right mt-4">
-                                <button class="btn btn-secondary px-4 mr-2">Cancel</button>
-                                <button class="btn btn-primary px-4">Pay</button>
-                            </div>
+                            <payment></payment>
                         </div>
                     </div>
 
