@@ -28,3 +28,7 @@ Route::get('/order/{id}', function($id) {
     $statuses = OrderStatus::STATUSES;
     return view('orders.show', compact('order', 'statuses'));
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
