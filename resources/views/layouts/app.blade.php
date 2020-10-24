@@ -2,6 +2,7 @@
 <head>
     <title>{{ config('app.name') }}</title>
     <link rel="stylesheet" href="{{ asset(mix('css/app.css')) }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}"> 
 </head>
 <body>
 <section id="app">
